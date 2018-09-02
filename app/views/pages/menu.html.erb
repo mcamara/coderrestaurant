@@ -1,0 +1,21 @@
+<h1>Menu</h1>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button style="width: 200px" type="button" class="btn btn-outline-secondary">Breakfast</button>
+  <button style="width: 200px" type="button" class="btn btn-outline-secondary">Lunch</button>
+  <button style="width: 200px" type="button" class="btn btn-outline-secondary">Dinner</button>
+  <button style="width: 200px" type="button" class="btn btn-outline-secondary">Drinks</button>
+</div>
+
+<table class="table table-striped">
+  <tbody>
+    <% @food_items.each do |food_item| %>
+      <tr>
+        <% if food_item.prsection == 'breakfast' %>
+          <td><%= food_item.name %></td>
+          <td><%= food_item.price %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

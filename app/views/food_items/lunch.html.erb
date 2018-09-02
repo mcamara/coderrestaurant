@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="/">CoderRestaurant</a>
+</nav>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1 style="text-align: center">Menu</h1>
+  <div class="row justify-content-center" style="margin-top: 20px">
+    <div style="margin-top: 20px" class="btn-group" role="group" aria-label="Basic example">
+      <a style="width: 200px" role="button" href="/menu" class="btn btn-outline-primary">Breakfast</a>
+      <a style="width: 200px" role="button" href="/menu/lunch" class="btn btn-outline-info active">Lunch</a>
+      <a style="width: 200px" role="button" href="/menu/dinner" class="btn btn-outline-success">Dinner</a>
+      <a style="width: 200px" role="button" href="/menu/drinks" class="btn btn-outline-warning">Drinks</a>
+    </div>
+    <ul style="width: 50%; margin-top: 50px" class="list-group" style="margin-top: 20px">
+      <% @food_items.each do |food_item| %>
+        <% if food_item.prsection == 'lunch' %>
+          <li class="list-group-item-action list-group-item d-flex justify-content-between align-items-center">
+            <%= link_to food_item.name, food_item_path(food_item), style: 'color: black' %>
+            <span class="badge badge-primary badge-pill">VND <%= food_item.price %></span>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <br>
+  <%= link_to 'New Food Item', new_food_item_path %>
+</div>
+
+
