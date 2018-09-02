@@ -4,9 +4,9 @@
 
 Submitted by: Phuong Dang
 
-Time spent: **XX** hours spent in total
+Time spent: 4 hours spent in total
 
-URL: **heroku-app-url**
+URL: https://aqueous-journey-50479.herokuapp.com/
 
 ## User Stories
 
